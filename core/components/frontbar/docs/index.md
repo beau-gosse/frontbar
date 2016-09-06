@@ -12,4 +12,5 @@ Simply place the following call within the `<body>` tag of your template:
 ```
 
 **Available properties:**
+
 _tpl_ => Name of the chunk serving as template. Default is _Frontbar_
