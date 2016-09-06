@@ -1,0 +1,43 @@
+{
+  "name": "Frontbar",
+  "lowCaseName": "frontbar",
+  "description": "Frontbar displays an admin toolbar in the frontend for loggedin users.",
+  "author": "Treigh P.M",
+  "version": "1.0.0-beta",
+  "package": {
+    "elements": {
+      "snippets": [{
+        "name": "Frontbar",
+        "description": "This snippet displays an admin toolbar in the frontend for loggedin users.",
+        "file": "frontbar.snippet.php"
+      }],
+      "chunks": [{
+        "name": "Frontbar",
+        "file": "frontbar.chunk.tpl"
+      }]
+    },
+    "systemSettings": [{
+      "key": "css_url",
+      "area": "assets",
+      "value": ""
+    }, {
+      "key": "fa_url",
+      "area": "assets",
+      "value": ""
+    }, {
+      "key": "js_url",
+      "area": "assets",
+      "value": ""
+    }, {
+      "key": "jq_url",
+      "area": "assets",
+      "value": ""
+    }]
+  },
+  "build": {
+    "readme": "docs/index.md",
+    "license": "docs/license.md",
+    "changelog": "docs/changelog.md",
+    "resolver": {}
+  }
+}

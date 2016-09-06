@@ -1,0 +1,16 @@
+_build/build.config.php
+config.core.php
+nav-hero-subnav.html
+nav-simple.html
+nav-subnav.html
+
+_packages/*.*
+!_packages/.gitignore
+!_packages/*.zip
+
+assets/components/frontbar/_build/
+
+.idea
+
+.DS_Store
+.DS_Store?
