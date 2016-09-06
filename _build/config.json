@@ -1,7 +1,7 @@
 {
   "name": "Frontbar",
   "lowCaseName": "frontbar",
-  "description": "Frontbar displays an admin toolbar in the frontend for loggedin users.",
+  "description": "Frontbar displays an admin toolbar in the frontend for logged in users.",
   "author": "Treigh P.M",
   "version": "1.0.0-beta",
   "package": {

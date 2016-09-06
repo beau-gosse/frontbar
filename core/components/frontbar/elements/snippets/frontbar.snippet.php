@@ -1,6 +1,6 @@
 <?php
 /**
- * This snippet displays an admin toolbar in the frontend for loggedin users.
+ * This snippet displays an admin toolbar in the frontend for logged in users.
  *
  * @package Frontbar
  * @subpackage snippet
