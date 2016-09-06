@@ -2,7 +2,7 @@
 
 Version: 1.0.0-beta
 
-Frontbar is an extra for MODX Revolution that displays an admin toolbar in the frontend for logged in users.
+Frontbar is an extra for MODX Revolution that displays an admin toolbar in the front end for logged in users.
 
 ## Usage example
 
