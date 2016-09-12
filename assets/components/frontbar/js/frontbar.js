@@ -1,4 +1,5 @@
 /*! Credits: https://codyhouse.co/demo/auto-hiding-navigation/nav-simple.html*/
+$('.ui.dropdown').dropdown({ on: 'hover' });
 $.noConflict();
 jQuery(document).ready(function($){
 	var mainHeader = $('.fbr-navbar'),

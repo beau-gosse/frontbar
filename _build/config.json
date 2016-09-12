@@ -3,7 +3,7 @@
   "lowCaseName": "frontbar",
   "description": "Frontbar displays an admin toolbar in the front end for logged in users.",
   "author": "Treigh P.M",
-  "version": "1.0.0-beta",
+  "version": "1.1.0-beta",
   "package": {
     "elements": {
       "snippets": [{
@@ -21,9 +21,25 @@
       "area": "assets",
       "value": ""
     }, {
+      "key": "sui_css",
+      "area": "assets",
+      "value": "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/components/dropdown.min.css"
+    }, {
+      "key": "sui_css_trans",
+      "area": "assets",
+      "value": "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/components/transition.min.css"
+    }, {
       "key": "fa_url",
       "area": "assets",
-      "value": ""
+      "value": "//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"
+    }, {
+      "key": "sui_js",
+      "area": "assets",
+      "value": "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/components/dropdown.min.js"
+    }, {
+      "key": "sui_js_trans",
+      "area": "assets",
+      "value": "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/components/transition.min.js"
     }, {
       "key": "js_url",
       "area": "assets",
