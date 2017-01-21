@@ -27,6 +27,7 @@
 				<div class="menu">
 					<a href="[[+profileURL]]" class="item">Edit Account</a>
 					<a href="[[+msgURL]]" class="item">Messages</a>
+					<a href="[[+logoutURL]]" class="item">Logout</a>
 				</div>
 			</li>
       `]]
