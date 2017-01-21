@@ -14,24 +14,24 @@
  *
  */
 /* check basic permissions */
-if (!$modx->user->hasSessionContext('mgr') || !$modx->hasPermission('edit_document,new_document')) {
-    //$modx->log(modX::LOG_LEVEL_ERROR, 'Couldn\'t load Frontbar due to insufficient permissions.', '', 'Frontbar');
-    return '';
+if ($modx->user instanceof modUser) {
+    if (!$modx->user->hasSessionContext('mgr') || !$modx->hasPermission('edit_document,new_document')) {
+        return '';
+    }
 }
-
 /* set default properties */
 $tpl = $modx->getOption('tpl', $scriptProperties, 'Frontbar');
 $pos = ($modx->getOption('position', $scriptProperties) == 'bottom' ? ' fixed-bottom' : '');
 
 /* set new resource parent + respect document hierarchy */
 $res =& $modx->resource;
-$id       = $res->get('id');
+$resid    = $res->get('id');
 $template = $res->get('template');
 $context  = $modx->context->key;
 $mgrURL   = MODX_MANAGER_URL;
 
 if ($res->get('class_key') == 'CollectionContainer' || $res->get('isfolder') == 1) {
-    $parent = $id;
+    $parent = $resid;
 } else {
     $parent = $res->get('parent');
 }
@@ -53,7 +53,7 @@ $modx->regClientCSS($cssURL);
 $modx->regClientCSS($suiCSS);
 $modx->regClientCSS($suiTransCSS);
 $modx->regClientCSS($faURL);
-// load JQuery only if not available
+// load JQuery if not available
 $modx->regClientHTMLBlock($jqLoad);
 $modx->regClientScript($suiJS);
 $modx->regClientScript($suiTransJS);
@@ -68,7 +68,7 @@ $fullName = $profile->get('fullName');
 return $modx->getChunk($tpl, array(
     'position' => $pos,
     'mgrURL' => $mgrURL,
-    'updateURL' => $mgrURL . '?a=resource/update&id=' . $id,
+    'updateURL' => $mgrURL . '?a=resource/update&id=' . $resid,
     'createURL' => $mgrURL . '?a=resource/create&parent=' . $parent . '&context_key=' . $context,
     'showTemplate' => $modx->hasPermission('edit_template') ? 1 : 0,
     'templateURL' => $mgrURL . '?a=element/template/update&id=' . $template,
@@ -76,6 +76,7 @@ return $modx->getChunk($tpl, array(
     'showProfile' => $modx->hasPermission('change_profile') ? 1 : 0,
     'profileURL' => $mgrURL . '?a=security/profile',
     'msgURL' => $mgrURL . '?a=security/message',
+    'logoutURL' => $mgrURL . '?a=security/logout',
     'settingsURL' => $mgrURL . '?a=system/settings',
     'username' => $modx->user->get('username'),
     'fullname' => $fullName,
