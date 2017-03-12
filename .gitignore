@@ -19,7 +19,8 @@ bower_components
 bower.json
 
 package.json
-Gruntfile.json
 node_modules
 
 package.json
+
+Gruntfile.js
