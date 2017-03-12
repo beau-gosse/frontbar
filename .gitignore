@@ -15,5 +15,7 @@ assets/components/frontbar/_build/
 .DS_Store
 .DS_Store?
 
+bower_components
 bower.json
+
 Gruntfile.json
