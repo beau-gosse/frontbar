@@ -8,12 +8,12 @@ Frontbar is an extra for MODX Revolution that displays an admin toolbar in the f
 
 Simply place the following call within the `<body>` tag of your template:
 ```
-[[Frontbar]]
+[[!Frontbar]]
 ```
 
 To position Frontbar at the bottom of the page:
 ```
-[[Frontbar? &position=`bottom`]]
+[[!Frontbar? &position=`bottom`]]
 ```
 
 **Available properties:**
