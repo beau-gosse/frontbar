@@ -21,7 +21,7 @@ if ($modx->user instanceof modUser) {
 }
 /* set default properties */
 $tpl = $modx->getOption('tpl', $scriptProperties, 'Frontbar');
-$pos = ($modx->getOption('position', $scriptProperties) == 'bottom' ? ' fixed-bottom' : '');
+$pos = ($modx->getOption('position', $scriptProperties)) == 'bottom' ? ' fixed-bottom' : '';
 
 /* set new resource parent + respect document hierarchy */
 $res =& $modx->resource;
