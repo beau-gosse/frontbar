@@ -1,0 +1,129 @@
+// Main prefix
+//
+
+$prefix: "fbr";
+
+// colors
+//
+
+$blue-dark: #2c3e50; // Midnight Blue
+$blue-light: #00bfff; // Old Lace
+$blue-navy: #25283d;
+$green-sea: #16a085;
+$gray-dark:                 #373a3c !default;
+$gray:                      #55595c !default;
+$gray-lighter: #eceeef;
+
+$navbar-bg: $blue-dark;
+$navbar-hover-color: $blue-light;
+$navbar-hover-bg: lighten($navbar-bg, 5%);
+$navbar-link-color: #fff;
+
+$body-color: $gray-dark;
+$text-muted: #999;
+
+// Typography
+//
+
+$font-family-main:
+    "-apple-system", BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; // System UI fonts
+$font-family-alt: 'David Libre', serif;
+
+$font-size-base: 16px !default;
+$font-size-sm: .85714285714286em; // 12px
+$font-size-navbar: .875em !default; // 14px
+
+$line-height-base: 1.5 !default;
+
+// z-index
+//
+
+$zindex-navbar: 99999 !default; // Place it above all else
+
+
+// Components
+//
+
+$border-width: 1px !default;
+$border-radius:          .25em !default;
+$border-radius-lg:       .3em !default;
+$border-radius-sm:       .2em !default;
+$spacer: 16px !default;
+
+// Navbar
+//
+
+$navbar-height: 40px;
+$navbar-height-small: 36px;
+$navbar-height-medium: 50px;
+
+$navbar-spacer-x: 1.25% !default; // 16px
+$navbar-spacer-y: $navbar-spacer-x !default;
+
+$navbar-link-padding: 0 .57142857142857em; // 0 8px
+$navbar-line-height: $navbar-height;
+
+// Dropdown
+//
+
+$dropdown-border-width: $border-width;
+$dropdown-border-color: $navbar-hover-bg;
+$dropdown-divider-bg: #e5e5e5 !default;
+
+$dropdown-bg: $navbar-bg !default;
+
+$caret-width: .3em !default;
+$caret-width-lg: $caret-width !default;
+
+$zindex-dropdown: ($zindex-navbar + 1) !default;
+
+// Sidebar
+//
+
+$sidebar-with-inner: 585px;
+$sidebar-width-outer: 620px;
+
+$sidebar-body-padding: 1em;
+$sidebar-padding: 2.5em .9375em; // 40px 15px
+
+$sidebar-box-shadow: -2px 0 3px rgba(0,0,0,.2); // Assumes the sidbar is positioned on the right
+
+// Forms
+// Based on Bootstrap's defaults
+
+$input-padding-x:                .75em !default;
+$input-padding-y:                .5em !default;
+$input-line-height:              1.25 !default;
+
+$input-bg:                       #fff !default;
+$input-bg-disabled:              $gray-lighter !default;
+
+$input-color:                    $gray !default;
+$input-border-color:             rgba(0,0,0,.15) !default;
+$input-btn-border-width:         $border-width !default; // For form controls and buttons
+$input-box-shadow:               inset 0 1px 1px rgba(0,0,0,.075) !default;
+
+$input-border-radius:            $border-radius !default;
+$input-border-radius-lg:         $border-radius-lg !default;
+$input-border-radius-sm:         $border-radius-sm !default;
+
+$input-bg-focus:                 $input-bg !default;
+$input-border-focus:             #66afe9 !default;
+$input-box-shadow-focus:         $input-box-shadow, 0 0 8px rgba(102,175,233,.6) !default;
+$input-color-focus:              $input-color !default;
+
+$input-color-placeholder:        #999 !default;
+
+$input-padding-x-sm:             .5em !default;
+$input-padding-y-sm:             .25em !default;
+
+$input-padding-x-lg:             1.5em !default;
+$input-padding-y-lg:             .75em !default;
+
+$input-width:                    95.298372513562% !default;
+
+$input-height:                   28px !default;
+
+$form-group-margin-bottom:       $spacer;

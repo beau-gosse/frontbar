@@ -1,0 +1,12 @@
+// # Dropdown
+// Extends or overrides Semantic UI's dropdown styles
+
+// Remove border radius
+.ui.dropdown .menu {
+  border-radius: 0 !important;
+}
+
+// Adjust font-size
+.ui.dropdown .menu > .item {
+  font-size: $font-size-navbar !important;
+}

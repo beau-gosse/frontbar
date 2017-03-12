@@ -1,0 +1,20 @@
+/**!
+ * The style sheet for Frontbar, a front-end quick-edit navbar for MODX Revolution.
+ * Based on https://codyhouse.co/redirect/?resource=auto-hiding-navigation
+ *
+ * @package Frontbar
+ * @version 1.0.0-beta
+ * @author Treigh P. M. -- kleverr.com
+ * License: MIT
+ * (c) 2016 Kleverr Creative
+ */
+
+// Note: Autoprefixer used to add vendor prefixes to our CSS -> https://github.com/postcss/autoprefixer
+
+@import "variables";
+@import "mixins";
+@import "layout";
+@import "navbar";
+@import "dropdown";
+@import "forms";
+@import "sidebar";

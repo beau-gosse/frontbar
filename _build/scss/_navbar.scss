@@ -1,0 +1,281 @@
+// # Navbar
+// Primary styles -- Auto-Hiding Navigation
+//
+
+.#{$prefix}-navbar,
+.#{$prefix}-navbar * {
+  font-family: $font-family-main !important;
+}
+
+.#{$prefix}-navbar {
+	position: fixed;
+	z-index: $zindex-navbar;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: $navbar-height-small;
+  // Set base font size
+  font-size: $font-size-base !important;
+	background-color: $navbar-bg;
+	@include clearfix;
+	// Force Hardware Acceleration
+	transform: translateZ(0);
+	will-change: transform;
+	transition: transform .5s;
+
+	a {
+		color: $navbar-link-color;
+		text-decoration: none;
+	}
+
+	&.is-hidden {
+		transform: translateY(-100%);
+	}
+  // optionally position at bottom
+  &.fixed-bottom {
+    top: auto;
+    bottom: 0;
+  }
+  &.fixed-bottom.is-hidden {
+    transform: translateY(100%);
+  }
+
+	@include MQ(L) {
+		height: $navbar-height;
+	}
+}
+
+.#{$prefix}-navbar .nav-brand,
+.#{$prefix}-navbar .nav-trigger {
+	position: absolute;
+	@include center(y);
+}
+
+.#{$prefix}-navbar .nav-brand {
+  left: $navbar-spacer-x;
+  //font-size: $font-size-navbar;
+
+	a, img {
+		display: block;
+	}
+
+  a {
+    line-height: $navbar-line-height;
+    padding: $navbar-link-padding;
+    display: inline-block;
+
+    &:hover,
+    a:focus,
+    &.active {
+      color: $navbar-hover-color;
+      text-decoration: none;
+      background-color: $navbar-hover-bg;
+    }
+  }
+}
+
+.#{$prefix}-navbar .nav-trigger {
+	// vertically align its content
+	display: table;
+	height: 100%;
+	padding: 0 1em;
+  font-size: 1.25em;
+	text-transform: uppercase;
+	color: $navbar-link-color;
+	font-weight: bold;
+	right: 0;
+	border-left: 1px solid shade($navbar-bg, 5%);
+
+	span {
+		// vertically align inside parent element
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	em,
+  em::after,
+  em::before {
+		// this is the menu icon
+		display: block;
+		position: relative;
+		height: 2px;
+		width: 22px;
+		background-color: $blue-navy;
+		backface-visibility: hidden;
+	}
+
+	em {
+		// this is the menu central line
+		margin: 6px auto 14px;
+		transition: background-color .2s;
+	}
+
+	em::before,
+  em::after {
+		position: absolute;
+		content: '';
+		left: 0;
+		transition: transform .2s;
+	}
+
+	em::before {
+		// this is the menu icon top line
+		transform: translateY(-6px);
+	}
+
+	em::after {
+		// this is the menu icon bottom line
+		transform: translateY(6px);
+	}
+
+	@include MQ(L) {
+		display: none;
+	}
+}
+
+.#{$prefix}-navbar.nav-open .nav-trigger {
+	em {
+		// transform menu icon into a 'X' icon
+		background-color: rgba($navbar-bg, 0);
+	}
+
+	em::before {
+		// rotate top line
+		transform: rotate(-45deg);
+	}
+
+	em::after {
+		// rotate bottom line
+		transform: rotate(45deg);
+	}
+}
+
+.#{$prefix}-primary-nav {
+	display: inline-block;
+	float: right;
+	height: 100%;
+  padding-right: $navbar-spacer-x;
+
+	> .nav {
+		position: absolute;
+		z-index: $zindex-navbar;
+		top: $navbar-height-small;
+		left: 0;
+		width: 100%;
+		background-color: $navbar-bg;
+		display: none;
+		box-shadow: 0 14px 20px rgba(0, 0, 0, .2);
+
+		.#{$prefix}-nav-link {
+			// target primary-nav links
+			display: block;
+			height: $navbar-height;
+      line-height: $navbar-line-height;
+      padding: $navbar-link-padding;
+      color: $navbar-link-color;
+			font-size: $font-size-navbar;
+			border-top: 1px solid shade($navbar-bg, 5%);
+
+			&:hover,
+      &.active {
+				color: $navbar-hover-color;
+        background-color: $navbar-hover-bg;
+			}
+
+      // User menu item
+      &.edit-user,
+      &.edit-user:hover {
+        border-left: 1px solid lighten($navbar-bg, 7%);
+      }
+      // user avatar
+      .user-image {
+        width: 32px;
+        border-radius: 100%;
+        display: inline-block;
+        line-height: 1;
+        float: left;
+        margin: .25em .57142857142857em .125em 0;
+      }
+		}
+	}
+
+	@include MQ(L) {
+		// vertically align its content
+		display: table;
+
+		> .nav {
+			// vertically align inside parent element
+			display: table-cell;
+			vertical-align: middle;
+			// reset mobile style
+			position: relative;
+			width: auto;
+			top: 0;
+			padding: 0;
+			@include clearfix;
+			background-color: transparent;
+			box-shadow: none;
+
+			.#{$prefix}-nav-item {
+				display: inline-block;
+				float: left;
+			}
+
+			.#{$prefix}-nav-link {
+				// reset mobile style
+				height: auto;
+				line-height: $navbar-line-height;
+				padding: $navbar-link-padding;
+				border: none;
+			}
+		}
+	}
+}
+
+// Icons
+.#{$prefix}-primary-nav .nav .#{$prefix}-nav-link,
+.#{$prefix}-navbar .nav-brand a {
+  &:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: rgba(240,245,250,.6);
+    margin-right: .57142857142857em;
+  }
+
+  &.icon-edit:before {
+    content: "\f040";
+  }
+
+  &.icon-new:before {
+    content: "\f067";
+  }
+
+  &.icon-setting:before {
+    content: "\f013";
+  }
+
+  &.icon-modx:before {
+    content: "\f285";
+  }
+  &.icon-user:before {
+    content: "\f007";
+  }
+  &.icon-template:before {
+    content: "\f0db";
+  }
+}
+
+.nav-open .#{$prefix}-primary-nav .nav,
+.#{$prefix}-primary-nav .nav:target {
+  // show primary nav - mobile only
+  // :target is used to show navigation on no-js devices
+	display: block;
+
+	@include MQ(L) {
+		display: table-cell;
+	}
+}

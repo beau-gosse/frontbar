@@ -1,0 +1,49 @@
+.#{$prefix}-sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-color: $gray-lighter;
+    color: $body-color;
+    width: $sidebar-width-outer;
+    padding: $sidebar-padding;
+    box-shadow: $sidebar-box-shadow;
+
+    &,
+    * {
+      font-family: $font-family-main !important;
+    }
+
+    // Adapt width for extra big screens
+    @include media-query(1400px) {
+      width: $sidebar-width-outer * 1.09375;
+    }
+    @include media-query(1600px) {
+      width: $sidebar-width-outer * 1.25;
+    }
+    @include media-query(1900px) {
+      width: $sidebar-width-outer * 1.484375;
+    }
+}
+
+.#{$prefix}-sidebar-right {
+    right: 0;
+}
+.#{$prefix}-sidebar-left {
+    left: 0;
+}
+
+[data-simplersidebar="sbbody"] {
+    padding: $sidebar-body-padding;
+}
+
+.#{$prefix}-sidebar-header {
+    position: relative;
+    padding: 0 $sidebar-body-padding;
+}
+.#{$prefix}-sidebar-body {
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: $sidebar-body-padding;
+}
