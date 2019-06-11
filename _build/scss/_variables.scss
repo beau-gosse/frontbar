@@ -17,6 +17,7 @@ $gray-lighter: #eceeef;
 $navbar-bg: $blue-dark;
 $navbar-hover-color: $blue-light;
 $navbar-hover-bg: lighten($navbar-bg, 5%);
+//$navbar-hover-bg: darken($navbar-bg, 5%);
 $navbar-link-color: #fff;
 
 $body-color: $gray-dark;
@@ -127,3 +128,7 @@ $input-width:                    95.298372513562% !default;
 $input-height:                   28px !default;
 
 $form-group-margin-bottom:       $spacer;
+
+
+// Misc.
+$transition:                     all .10s ease-in-out;

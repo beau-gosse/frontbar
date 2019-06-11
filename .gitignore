@@ -3,12 +3,15 @@ config.core.php
 nav-hero-subnav.html
 nav-simple.html
 nav-subnav.html
+nav-bulma.html
 
 _packages/*.*
 !_packages/.gitignore
 !_packages/*.zip
 
 assets/components/frontbar/_build/
+
+/.sass-cache
 
 .idea
 

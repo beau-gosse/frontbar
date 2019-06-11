@@ -1,6 +1,6 @@
 # Frontbar
 
-Version: 1.1.0-beta
+Version: 1.2.0-beta
 
 Frontbar is an extra for MODX Revolution that displays an admin toolbar in the front end for logged in users.
 
@@ -18,4 +18,4 @@ To position Frontbar at the bottom of the page:
 
 **Available properties:**
 
-_tpl_ => Name of the chunk serving as template. Default is _Frontbar_
+`tpl` => Name of the chunk serving as template. Default is `Frontbar`

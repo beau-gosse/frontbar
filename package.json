@@ -4,11 +4,13 @@
   "description": "Common app scripts.",
   "license": "MIT",
   "devDependencies": {
+    "bulma": "^0.7.5",
     "grunt": "^0.4.5",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-nodeunit": "~0.4.1",
     "grunt-contrib-uglify": "^0.5.1",
-    "grunt-contrib-watch": "^1.0.0"
+    "grunt-contrib-watch": "^1.0.0",
+    "node-sass": "^4.12.0"
   }
 }
